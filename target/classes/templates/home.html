@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>my forum</title>
+</head>
+<body>
+	<nav>
+		<div>
+			<ul>
+				<li><a th:href="@{/signup}">SIGN UP</a></li>
+				<li><a th:href="@{/login}">LOG IN</a></li>
+			</ul>
+		</div>
+	</nav>
+	<h1>Welcome to my forum</h1>
+	<h5><a th:href="@{/display/1}">See all threads</a></h5>
+</body>
+</html>

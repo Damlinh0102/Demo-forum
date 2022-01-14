@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>my forum</title>
+</head>
+<body>
+<form th:action="@{/save}" method="post">
+<p th:if="post!=null">ID</p>
+<p th:if="post!=null"><input th:field=${post.id} ></p>
+<p>Description</p>
+<p><input th:field=${post.description} type="text"></p>
+<p>Content</p>
+<p><textarea th:field=${post.content}></textarea></p>
+<p><input type="submit"></p>
+</form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>my forum</title>
+</head>
+<body>
+<h1 th:text=${post.description}></h1>
+<p th:text=${post.content}></p>
+<p th:if="${post.user.id}==${principal}"><a th:href="@{'/update/' + ${post.id}}">Update</a></p>
+<p th:if="${post.user.id}==${principal}"><a th:href="@{'/delete/' + ${post.id}}">Delete</a></p>
+</body>
+</html>

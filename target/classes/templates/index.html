@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>my forum</title>
+
+</head>
+<body>
+<h4><a th:href="@{/add}">Click here to post new content</a></h4>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Description</th>
+			<th>Day Updated</th>
+			<th>Creater</th>
+			<th>Action</th>
+		</tr>
+		<tr th:each="var:${posts}">
+			<td th:text=${var.id}></td>
+			<td th:text=${var.description}></td>
+			<td th:text=${var.day}></td>
+			<td th:text=${var.user.email}></td>
+			<td><a th:href="@{'/seemore/'+${var.id}}">See more</a></td>
+		</tr>
+	</table>
+	<div>
+	<span th:each="i:${#numbers.sequence(1,totalpages)}"><a th:href="@{'/display/'+${i}}">[[${i}]]</a></span> 
+	</div>
+</body>
+</html>
