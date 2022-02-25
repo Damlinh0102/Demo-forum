@@ -30,7 +30,7 @@ public class PostController {
 	
 	private UserService uService;
 	
-	@RequestMapping("/home")
+	@RequestMapping("/homehouse")
 	public String home() {
 		return "home";
 	}
